@@ -1,143 +1,143 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<b:template-skin>
-  <![CDATA[
-  /* Variables */
-  :root {
-    --cnn-red: #CC0000;
-    --dark-text: #222222;
-    --light-gray: #F1F1F1;
-    --body-text: #333333;
-    --link-color: #004B93;
-  }
+<b:template>
+  <b:skin>
+    <![CDATA[
+    /* Variables */
+    :root {
+      --cnn-red: #CC0000;
+      --dark-text: #222222;
+      --light-gray: #F1F1F1;
+      --body-text: #333333;
+      --link-color: #004B93;
+    }
 
-  /* Reset and base styles */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    color: var(--body-text);
-    line-height: 1.6;
-  }
+    /* Reset and base styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      color: var(--body-text);
+      line-height: 1.6;
+    }
 
-  /* Header styles */
-  .header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: white;
-    border-bottom: 1px solid #e5e5e5;
-  }
+    /* Header styles */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
+    }
 
-  .header-content {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .site-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--cnn-red);
-  }
-
-  /* Navigation */
-  .nav-menu {
-    display: none;
-  }
-
-  @media (min-width: 768px) {
-    .nav-menu {
+    .header-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1rem;
       display: flex;
-      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
     }
-  }
 
-  .nav-link {
-    color: var(--dark-text);
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--cnn-red);
+    }
 
-  .nav-link:hover {
-    color: var(--cnn-red);
-  }
+    /* Navigation */
+    .nav-menu {
+      display: none;
+    }
 
-  /* Main content layout */
-  .main-content {
-    max-width: 1280px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+    @media (min-width: 768px) {
+      .nav-menu {
+        display: flex;
+        gap: 1.5rem;
+      }
+    }
 
-  @media (min-width: 1024px) {
+    .nav-link {
+      color: var(--dark-text);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: var(--cnn-red);
+    }
+
+    /* Main content layout */
     .main-content {
-      grid-template-columns: 2fr 1fr;
+      max-width: 1280px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
-  }
 
-  /* Featured article */
-  .featured-article {
-    position: relative;
-    cursor: pointer;
-  }
+    @media (min-width: 1024px) {
+      .main-content {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
 
-  .featured-image {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-  }
+    /* Featured article */
+    .featured-article {
+      position: relative;
+      cursor: pointer;
+    }
 
-  .article-category {
-    color: var(--cnn-red);
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    margin-top: 1rem;
-  }
+    .featured-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
 
-  .article-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
-  }
+    .article-category {
+      color: var(--cnn-red);
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      margin-top: 1rem;
+    }
 
-  .article-snippet {
-    color: var(--body-text);
-    font-size: 0.875rem;
-  }
+    .article-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
 
-  /* AdSense spaces */
-  .ad-space-header {
-    margin: 1rem 0;
-    min-height: 90px;
-    background: var(--light-gray);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .article-snippet {
+      color: var(--body-text);
+      font-size: 0.875rem;
+    }
 
-  .ad-space-sidebar {
-    min-height: 600px;
-    background: var(--light-gray);
-    margin: 1rem 0;
-  }
+    /* AdSense spaces */
+    .ad-space-header, .ad-space-sidebar, .ad-space-between-articles {
+      background: var(--light-gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0;
+    }
 
-  .ad-space-between-articles {
-    min-height: 250px;
-    background: var(--light-gray);
-    margin: 2rem 0;
-  }
-  ]]>
-</b:template-skin>
+    .ad-space-header {
+      min-height: 90px;
+    }
 
-<b:template name='CNN Style News Theme'>
+    .ad-space-sidebar {
+      min-height: 600px;
+    }
+
+    .ad-space-between-articles {
+      min-height: 250px;
+      margin: 2rem 0;
+    }
+    ]]>
+  </b:skin>
+
   <html b:css='false' b:js='false' b:responsive='true' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
     <head>
       <meta charset='UTF-8'/>
@@ -147,7 +147,7 @@
       
       <!-- AdSense Auto Ads -->
       <b:if cond='data:blog.adsenseClientId'>
-        <script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_CLIENT_ID'/>
+        <script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_CLIENT_ID'></script>
       </b:if>
     </head>
     
@@ -167,7 +167,7 @@
       </header>
 
       <!-- Ad space after header -->
-      <div class='ad-space-header'/>
+      <div class='ad-space-header'></div>
 
       <!-- Main content -->
       <main class='main-content'>
@@ -218,7 +218,7 @@
                     
                     <!-- Ad space between articles -->
                     <b:if cond='data:blog.adsenseClientId and data:post.index % 3 == 0'>
-                      <div class='ad-space-between-articles'/>
+                      <div class='ad-space-between-articles'></div>
                     </b:if>
                   </b:loop>
                 </div>
@@ -230,7 +230,7 @@
         <!-- Sidebar -->
         <aside class='sidebar'>
           <!-- Ad space in sidebar -->
-          <div class='ad-space-sidebar'/>
+          <div class='ad-space-sidebar'></div>
           
           <!-- Other sidebar widgets -->
           <b:section class='sidebar' id='sidebar' preferred='yes'>
