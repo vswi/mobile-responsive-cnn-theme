@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<b:template>
-  <b:skin>
-    <![CDATA[
+<b:template-skin>
+  <![CDATA[
     /* Variables */
     :root {
       --cnn-red: #CC0000;
@@ -135,9 +134,10 @@
       min-height: 250px;
       margin: 2rem 0;
     }
-    ]]>
-  </b:skin>
+  ]]>
+</b:template-skin>
 
+<b:template>
   <html b:css='false' b:js='false' b:responsive='true' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
     <head>
       <meta charset='UTF-8'/>
@@ -175,27 +175,6 @@
           <!-- Blog posts -->
           <b:section class='main' id='main' showaddelement='true'>
             <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
-              <b:widget-settings>
-                <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-                <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-                <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-                <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-                <b:widget-setting name='style.urlcolor'>#004B93</b:widget-setting>
-                <b:widget-setting name='showAuthor'>true</b:widget-setting>
-                <b:widget-setting name='style.linkcolor'>#004B93</b:widget-setting>
-                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-                <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-                <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
-                <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-                <b:widget-setting name='showLabels'>true</b:widget-setting>
-                <b:widget-setting name='showLocation'>false</b:widget-setting>
-                <b:widget-setting name='showTimestamp'>true</b:widget-setting>
-                <b:widget-setting name='postsPerAd'>3</b:widget-setting>
-                <b:widget-setting name='showBacklinks'>true</b:widget-setting>
-                <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-                <b:widget-setting name='showInlineAds'>true</b:widget-setting>
-                <b:widget-setting name='showReactions'>true</b:widget-setting>
-              </b:widget-settings>
               <b:includable id='main' var='this'>
                 <div class='blog-posts'>
                   <b:loop values='data:posts' var='post'>
@@ -233,9 +212,7 @@
           <div class='ad-space-sidebar'></div>
           
           <!-- Other sidebar widgets -->
-          <b:section class='sidebar' id='sidebar' preferred='yes'>
-            <!-- Add sidebar widgets here -->
-          </b:section>
+          <b:section class='sidebar' id='sidebar' preferred='yes'></b:section>
         </aside>
       </main>
     </body>
