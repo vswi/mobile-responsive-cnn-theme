@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<b:template-skin>
-  <![CDATA[
+<b:template>
+  <b:template-skin>
+    <![CDATA[
     /* Variables */
     :root {
       --cnn-red: #CC0000;
@@ -134,10 +135,9 @@
       min-height: 250px;
       margin: 2rem 0;
     }
-  ]]>
-</b:template-skin>
+    ]]>
+  </b:template-skin>
 
-<b:template>
   <html b:css='false' b:js='false' b:responsive='true' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
     <head>
       <meta charset='UTF-8'/>
